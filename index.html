@@ -9,14 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="top-banner">
+        Looking for the 2025 edition? Visit <a href="https://hidream-ai.github.io/ipvg-challenge.github.io/" target="_blank">IPVG Challenge @ ACM MM 2025</a>
+    </div>
     <header>
         <div class="banner">
             <div class="overlay"></div>
             <div class="header-content">
                 <h1>IDENTITY-PRESERVING VIDEO GENERATION CHALLENGE</h1>
-                <h3>@ ACM MULTIMEDIA 2025</h3>
+                <h3>@ ACM MULTIMEDIA 2026</h3>
                 <div class="conference-logo">
-                    <!-- <img src="acm-logo.png" alt="ACM MM 2025" class="logo-image"> -->
+                    <!-- <img src="acm-logo.png" alt="ACM MM 2026" class="logo-image"> -->
                 </div>
             </div>
         </div>
@@ -25,7 +28,6 @@
     <nav id="main-nav" class="sticky">
         <div class="nav-container">
             <ul>
-                <li><a href="#results">Leaderboard</a></li>
                 <li><a href="#overview">Challenge Overview</a></li>
                 <li><a href="#task">Task</a></li>
                 <li><a href="#datasets">Datasets</a></li>
@@ -43,7 +45,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h2 style="white-space: nowrap;">ACM Multimedia 2025 Grand Challenge</h2>
+                    <h2 style="white-space: nowrap;">ACM Multimedia 2026 Grand Challenge</h2>
                     <p class="tagline">Advancing the frontiers of identity-preserving generative video models</p>
                     <div class="hero-buttons">
                         <a href="https://forms.gle/tGiqW54gnH2KVSZ86" class="btn primary-btn" target="_blank">Register <span style="font-size: 0.8em;">(Google form)</span></a>
@@ -57,101 +59,24 @@
     
     <main>
         <div class="container">
-            <section id="results" class="content-section">
-                <div class="section-header">
-                    <h2><i class="fas fa-trophy"></i> Leaderboard</h2>
-                    <div class="section-underline"></div>
-                </div>
-                <div class="content-box">
-                    <h3>Phase 1</h3>
-                    <p>The first phase involved scoring all participating teams based on their rankings across various objective metrics. The top three teams with the highest aggregate scores advanced to the second phase.</p>
-                    <div class="table-container">
-                        <table class="dataset-table">
-                            <thead>
-                                <tr>
-                                    <th>Team Name</th>
-                                    <th>Face-Cur (↑)</th>
-                                    <th>Face-Arc (↑)</th>
-                                    <th>FID (↓)</th>
-                                    <th>ClipScore (↑)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>ghl (PKUVideo)</td>
-                                    <td>0.492</td>
-                                    <td>0.473</td>
-                                    <td>170</td>
-                                    <td>27.8</td>
-                                </tr>
-                                <tr>
-                                    <td>XuanYuan</td>
-                                    <td>0.467</td>
-                                    <td>0.441</td>
-                                    <td>214</td>
-                                    <td>28.0</td>
-                                </tr>
-                                <tr>
-                                    <td>Wislab</td>
-                                    <td>0.285</td>
-                                    <td>0.269</td>
-                                    <td>208</td>
-                                    <td>28.6</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <h3 style="margin-top: 2em;">Phase 2</h3>
-                    <p>For the second phase, the results from the top three teams underwent a user study. We constructed 3,000 1v1 comparison pairs by evaluating all pairwise combinations of team results for each test sample. In each head-to-head comparison, a win received 1 point, a draw 0.5 points, and a loss 0 points.</p>
-                    <div class="table-container">
-                        <table class="dataset-table">
-                            <thead>
-                                <tr>
-                                    <th>Team Name</th>
-                                    <th>Score</th>
-                                    <th>Rank</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>ghl (PKUVideo)</td>
-                                    <td>1258</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>XuanYuan</td>
-                                    <td>1147.5</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td>Wislab</td>
-                                    <td>594.5</td>
-                                    <td>3</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
             <section id="overview" class="content-section"> 
                 <div class="section-header">
                     <h2><i class="fas fa-info-circle"></i> Challenge Overview</h2>
                     <div class="section-underline"></div>
                 </div>
                 <div class="content-box">
-                    <p>In this grand challenge, we introduce <strong>Identity-Preserving Video Generation (IPVG)</strong> task, which maintains the consistency of given reference identity along text-to-video generation process. This year's IPVG grand challenge includes two tracks:</p>
+                    <p>In this grand challenge, we introduce <strong>Identity-Preserving Video Generation (IPVG)</strong> task, which maintains the consistency of given reference identity along text-to-video generation process. This year's IPVG grand challenge includes two tracks: Facial Identity-Preserving Video Generation and Sequential Action Identity-Preserving Video Generation. In general, the goal of this grand challenge is two-fold: (a) coalescing community effort around new challenging identity-preserving video generation datasets, and (b) offering a fertile ground for designing controllable generative models to facilitate precise identity binding in video generation, aiming to propel the field toward more accountable and user-steerable video synthesis systems.</p>
                     <div class="challenge-tracks">
                         <div class="track">
                             <div class="track-icon"><i class="fas fa-user"></i></div>
                             <div class="track-title">Facial Identity-Preserving Video Generation</div>
                         </div>
                         <div class="track">
-                            <div class="track-icon"><i class="fas fa-user-tie"></i></div>
-                            <div class="track-title">Full-body Identity-Preserving Video Generation</div>
+                            <div class="track-icon"><i class="fas fa-person-running"></i></div>
+                            <div class="track-title">Sequential Action Identity-Preserving Video Generation</div>
                         </div>
                     </div>
-                    <p>To further motivate and challenge the academic and industrial research communities, we have released a new dataset: <strong>Identity-Preserving Video Benchmark (VIP-200K)</strong>, consisting of approximately 500,000 video-prompt pairs with 200,000 unique identities.</p>
+                    <p>To further support the research community, this year's challenge provides two large-scale datasets: the <strong>Identity-Preserving Video Benchmark (VIP-200K)</strong>, with approximately 500,000 video-prompt pairs and 200,000 unique identities, and the newly introduced <strong>ReactID-Data</strong>, which features subject–video pairs accompanied by structured timeline annotations for sequential action generation.</p>
                 </div>
             </section>
             
@@ -165,16 +90,16 @@
                     <div class="task-cards">
                         <div class="task-card">
                             <div class="task-number">01</div>
-                            <h3>Facial identity-preserving text-to-video generation</h3>
+                            <h3>Facial identity-preserving video generation</h3>
                             <p>Given videos and corresponding prompts plus reference identity facial images, the goal is to synthesize temporally consistent videos that align with prompts while maintaining identity preservation.</p>
                         </div>
                         <div class="task-card">
                             <div class="task-number">02</div>
-                            <h3>Full-body identity-preserving text-to-video generation</h3>
-                            <p>This track extends the first by enforcing identity-preserving constraints on hairstyle, face, clothing, and other attributes across generated frames.</p>
+                            <h3>Sequential action identity-preserving video generation</h3>
+                            <p>Given reference images and timeline prompts specifying multiple actions with timestamps (e.g., "0–2s: [Action A]; 2–5s: [Action B]"), the goal is to generate videos where the subject accurately performs the sequence while consistently preserving identity. This track applies to full-body humans, animals, and objects.</p>
                         </div>
                     </div>
-                    <p>Contestants must develop an identity-preserving video generation system based on the VIP-200K dataset. For evaluation, systems must generate at least one video per <identity images, prompt> pair in the test set.</p>
+                    <p>Contestants must develop identity-preserving video generation systems. For Track 1, systems should be based on the VIP-200K dataset. For Track 2, systems should be based on the ReactID-Data dataset. For evaluation, systems must generate at least one video per &lt;identity images, prompt&gt; pair in the test set.</p>
                 </div>
             </section>
             <section id="datasets" class="content-section">
@@ -184,6 +109,8 @@
                 </div>
                 <div class="content-box">
                     <p>To formalize the task of identity-preserving text-to-video generation, we provide the following datasets:</p>
+                    
+                    <h3 style="margin-top: 1.5em; color: var(--primary-color);">Track 1 — Facial Identity-Preserving Video Generation</h3>
                     <div class="dataset-info">
                         <div class="dataset-item">
                             <h4><i class="fas fa-film"></i> Training Dataset</h4>
@@ -222,6 +149,22 @@
                         </table>
                         <p style="color: red; font-weight: bold; font-size: 1.2em; margin-top: 15px; text-align: center;">To access the dataset, please register via this <a href="https://forms.gle/tGiqW54gnH2KVSZ86" style="color: red; text-decoration: underline;">form</a> and download from <a href="https://huggingface.co/datasets/HiDream-ai/VIP-200K" style="color: red; text-decoration: underline;"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Huggingface/VIP200K-orange" alt="HuggingFace Dataset" style="vertical-align: middle;"></a></p>
                     </div>
+                    
+                    <h3 style="margin-top: 2em; color: var(--primary-color);">Track 2 — Sequential Action Identity-Preserving Video Generation</h3>
+                    <div class="dataset-info">
+                        <div class="dataset-item">
+                            <h4><i class="fas fa-film"></i> Training Dataset</h4>
+                            <p><strong>ReactID-Data.</strong> Each sample is a Video-Prompt-Identity set, where the Identity may include one or more entities (such as humans, animals, or objects). The 1.2M subset further includes <strong>structured timeline prompts</strong> (e.g., "0–2s: [Action A]; 2–5s: [Action B]").</p>
+                        </div>
+                        <div class="dataset-item">
+                            <h4><i class="fas fa-vial"></i> Testing Dataset</h4>
+                            <p>200 groups of unseen IDs. Each group contains reference images for one or more subjects, and is provided with 5 different structured timeline prompts for video generation, for a total of 1,000 test samples.</p>
+                        </div>
+                    </div>
+                    <div class="note-box" style="margin-top: 15px;">
+                        <i class="fas fa-clock"></i>
+                        <p><strong>Coming Soon:</strong> The Track 2 dataset (ReactID-Data) is currently under preparation and will be released shortly. Please stay tuned for updates.</p>
+                    </div>
                 </div>
             </section>
             <section id="submission" class="content-section">
@@ -230,24 +173,24 @@
                     <div class="section-underline"></div>
                 </div>
                 <div class="content-box">
-                    <p>We provide two separate test datasets for the VIP200K challenge tracks. Download the appropriate dataset, prepare your results following our structure, and submit via Google Drive.</p>
+                    <p>We provide two separate test datasets for the challenge tracks. Download the appropriate dataset, prepare your results following our structure, and submit via Google Drive.</p>
                     
                     <div class="task-cards">
                         <div class="task-card">
                             <div class="task-number"><i class="fas fa-user"></i></div>
-                            <h3>Facial Identity-Preserving Track</h3>
+                            <h3>Track 1: Facial Identity-Preserving Track</h3>
                             <p>Download the facial track test dataset containing 200 identities with reference images and prompts.</p>
                             <a href="https://github.com/HiDream-ai/ipvg-challenge.github.io/releases/download/testset/vip200k_test_track_Facial.zip" class="btn primary-btn" target="_blank">
                                 <i class="fas fa-download"></i> Download Test Set
                             </a>
                         </div>
                         <div class="task-card">
-                            <div class="task-number"><i class="fas fa-user-tie"></i></div>
-                            <h3>Full-body Identity-Preserving Track</h3>
-                            <p>Download the full-body track test dataset containing 200 identities with reference images and prompts.</p>
-                            <a href="https://github.com/HiDream-ai/ipvg-challenge.github.io/releases/download/testset/vip200k_test_track_Fullbody.zip" class="btn primary-btn" target="_blank">
-                                <i class="fas fa-download"></i> Download Test Set
-                            </a>
+                            <div class="task-number"><i class="fas fa-person-running"></i></div>
+                            <h3>Track 2: Sequential Action Identity-Preserving Track</h3>
+                            <p>Download the sequential action track test dataset containing 200 groups of IDs with reference images and structured timeline prompts.</p>
+                            <span class="btn primary-btn" style="opacity: 0.6; cursor: default;">
+                                <i class="fas fa-clock"></i> Coming Soon
+                            </span>
                         </div>
                     </div>
                     
@@ -302,7 +245,7 @@
                                 <div class="submission-steps-list">
                                     <div class="step-item">
                                         <span class="step-label">Step 1:</span>
-                                        <span>Compress results into <code>facial_results.zip</code> or <code>fullbody_results.zip</code></span>
+                                        <span>Compress results into <code>facial_results.zip</code> (Track 1) or <code>sequential_action_results.zip</code> (Track 2)</span>
                                     </div>
                                     <div class="step-item">
                                         <span class="step-label">Step 2:</span>
@@ -351,6 +294,13 @@
                                 <p>Evaluated via visual quality, motion dynamics, and text alignment using both objective metrics and human assessment.</p>
                             </div>
                         </div>
+                        <div class="metric">
+                            <div class="metric-number">03</div>
+                            <div class="metric-content">
+                                <h4>Action–Timeline Alignment <span style="font-weight: normal; font-size: 0.85em; color: var(--light-text);">(Track 2 only)</span></h4>
+                                <p>Evaluate how well the generated actions match the timestamps in the timeline prompts (text–video alignment and temporal consistency).</p>
+                            </div>
+                        </div>
                     </div>
                     <p>Final scores combine objective and subjective evaluation results.</p>
                 </div>
@@ -378,37 +328,43 @@
                 <div class="content-box">
                     <div class="timeline">
                         <div class="timeline-item">
-                            <div class="timeline-date">March 8, 2025</div>
+                            <div class="timeline-date">March 10, 2026</div>
                             <div class="timeline-content">
-                                <h4>Website & Call for Participation</h4>
+                                <h4>Website & Call for Participation Ready</h4>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-date">March 15, 2025</div>
+                            <div class="timeline-date">March 15, 2026</div>
                             <div class="timeline-content">
-                                <h4>Dataset release</h4>
+                                <h4>Dataset available for download (training and validation sets)</h4>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-date">June 5, 2025</div>
+                            <div class="timeline-date">May 10, 2026</div>
                             <div class="timeline-content">
-                                <h4>Testing set release</h4>
+                                <h4>Testing set of each track available for download</h4>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-date">June 20, 2025</div>
+                            <div class="timeline-date">May 16, 2026</div>
                             <div class="timeline-content">
                                 <h4>Results submission</h4>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-date"><del>June 26, 2025</del> <ins>June 28, 2025</ins></div>
+                            <div class="timeline-date">May 17–21, 2026</div>
+                            <div class="timeline-content">
+                                <h4>Objective evaluation</h4>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">May 22, 2026</div>
                             <div class="timeline-content">
                                 <h4>Evaluation results announcement</h4>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-date"><del>June 30, 2025</del> <ins>July 5, 2025</ins></div>
+                            <div class="timeline-date">May 28, 2026</div>
                             <div class="timeline-content">
                                 <h4>Paper submission deadline</h4>
                             </div>
@@ -425,7 +381,7 @@
                 <div class="content-box">
                     <div class="paper-submission-guidelines">
                         <div class="paper-section">
-                            <p>We will invite the top-3 performing teams to submit a technical paper (up to 6+2 pages) via email (panyw.ustc@gmail.com), which will be peer-reviewed. The paper submission deadline is <del>June 30, 2025</del> <ins>July 5, 2025</ins>. Accepted papers will be published in the conference proceedings of ACM Multimedia 2025.</p>
+                            <p>We will invite the top-3 performing teams to submit a technical paper (up to 6+2 pages) via email (panyw.ustc@gmail.com), which will be peer-reviewed. The paper submission deadline is May 28, 2026. Accepted papers will be published in the conference proceedings of ACM Multimedia 2026.</p>
                         </div>
                         
                         <div class="paper-section">
@@ -443,12 +399,12 @@
                 <div id="contact" class="footer-section contact">
                     <h4>Contact Us</h4>
                     <p><i class="fas fa-envelope"></i> panyw.ustc@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> ACM Multimedia 2025</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ACM Multimedia 2026</p>
                 </div>
                 <div class="footer-section links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="https://acmmm2025.org" target="_blank">ACM MM 2025</a></li>
+                        <li><a href="https://acmmm2026.org" target="_blank">ACM MM 2026</a></li>
                         <li><a href="#overview">Challenge Overview</a></li>
                         <li><a href="#datasets">Datasets</a></li>
                     </ul>
@@ -462,7 +418,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Identity-Preserving Video Generation Challenge | ACM Multimedia</p>
+                <p>&copy; 2026 Identity-Preserving Video Generation Challenge | ACM Multimedia</p>
             </div>
         </div>
     </footer>
