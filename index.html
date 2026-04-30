@@ -99,7 +99,7 @@
                             <p>Given reference images and timeline prompts specifying multiple actions with timestamps (e.g., "0–2s: [Action A]; 2–5s: [Action B]"), the goal is to generate videos where the subject accurately performs the sequence while consistently preserving identity. This track applies to full-body humans, animals, and objects.</p>
                         </div>
                     </div>
-                    <p>Contestants must develop identity-preserving video generation systems. For Track 1, systems should be based on the VIP-200K dataset. For Track 2, systems should be based on the ReactID-Data dataset. For evaluation, systems must generate at least one video per &lt;identity images, prompt&gt; pair in the test set.</p>
+                    <p>Contestants must develop identity-preserving video generation systems. For Track 1, systems should be based on the VIP-200K dataset. For Track 2, systems should be based on the ReactID-Data dataset. For evaluation, systems must generate one video for each sample in the corresponding test set <code>eval.json</code>.</p>
                 </div>
             </section>
             <section id="datasets" class="content-section">
@@ -118,7 +118,7 @@
                         </div>
                         <div class="dataset-item">
                             <h4><i class="fas fa-vial"></i> Testing Dataset</h4>
-                            <p>200 unseen person IDs. Each ID has portrait images and five textual prompts for video generation, totaling 1,000 test pairs.</p>
+                            <p>200 evaluation samples in <code>eval.json</code>. Each sample includes a reference face image and a prompt for video generation.</p>
                         </div>
                     </div>
                     
@@ -158,12 +158,12 @@
                         </div>
                         <div class="dataset-item">
                             <h4><i class="fas fa-vial"></i> Testing Dataset</h4>
-                            <p>200 groups of unseen IDs. Each group contains reference images for one or more subjects, and is provided with 5 different structured timeline prompts for video generation, for a total of 1,000 test samples.</p>
+                            <p>200 evaluation samples in <code>eval.json</code>. Each sample includes reference image paths, class labels, a global prompt, and temporal captions with start and end timestamps.</p>
                         </div>
                     </div>
                     <div class="note-box" style="margin-top: 15px;">
-                        <i class="fas fa-clock"></i>
-                        <p><strong>Coming Soon:</strong> The Track 2 dataset (ReactID-Data) is currently under preparation and will be released shortly. Please stay tuned for updates.</p>
+                        <i class="fas fa-download"></i>
+                        <p>To access the Track 2 training dataset, please download <a href="https://huggingface.co/datasets/HiDream-ai/ReactID-Data" target="_blank">ReactID-Data on Hugging Face</a>.</p>
                     </div>
                 </div>
             </section>
@@ -179,37 +179,43 @@
                         <div class="task-card">
                             <div class="task-number"><i class="fas fa-user"></i></div>
                             <h3>Track 1: Facial Identity-Preserving Track</h3>
-                            <p>Download the facial track test dataset containing 200 identities with reference images and prompts.</p>
-                            <a href="https://github.com/HiDream-ai/ipvg-challenge.github.io/releases/download/testset/vip200k_test_track_Facial.zip" class="btn primary-btn" target="_blank">
+                            <p>Download the facial track test dataset containing 200 evaluation samples with reference face images and prompts.</p>
+                            <a href="https://github.com/HiDream-ai/ipvg-challenge-2026.github.io/releases/download/testset/IPVG2026-Test-Track1.zip" class="btn primary-btn" target="_blank">
                                 <i class="fas fa-download"></i> Download Test Set
                             </a>
                         </div>
                         <div class="task-card">
                             <div class="task-number"><i class="fas fa-person-running"></i></div>
                             <h3>Track 2: Sequential Action Identity-Preserving Track</h3>
-                            <p>Download the sequential action track test dataset containing 200 groups of IDs with reference images and structured timeline prompts.</p>
-                            <span class="btn primary-btn" style="opacity: 0.6; cursor: default;">
-                                <i class="fas fa-clock"></i> Coming Soon
-                            </span>
+                            <p>Download the sequential action track test dataset containing 200 evaluation samples with reference images, class labels, global prompts, and temporal captions.</p>
+                            <a href="https://github.com/HiDream-ai/ipvg-challenge-2026.github.io/releases/download/testset/IPVG2026-Test-Track2.zip" class="btn primary-btn" target="_blank">
+                                <i class="fas fa-download"></i> Download Test Set
+                            </a>
                         </div>
                     </div>
                     
                     <div class="dataset-info">
                         <div class="dataset-item">
                             <h4><i class="fas fa-folder-open"></i> Test Dataset Content</h4>
-                            <p>Each dataset contains <strong>200 identities (IDs)</strong> organized in folders. Per ID folder: 1 reference image file (<code>image.png</code> or <code>image.webp</code>) and 5 text prompt files (<code>prompt1.txt</code> to <code>prompt5.txt</code>).</p>
+                            <p>Each track contains <strong>200 evaluation samples</strong> in <code>eval.json</code>. Track 1 samples include <code>img</code> and <code>prompt</code>. Track 2 samples include <code>img_paths</code>, <code>class_label</code>, <code>global_prompt</code>, and <code>temporal_captions</code>.</p>
                         </div>
                         <div class="dataset-item">
                             <h4><i class="fas fa-sitemap"></i> Directory Structure</h4>
                             <div class="code-block">
-                                <pre>testset/
-├── id001/
-│   ├── image.png          # Reference image
-│   ├── prompt1.txt        # Text prompt
-│   ├── ...
-│   └── prompt5.txt
-├── ...
-└── id200/</pre>
+                                <pre>test_track1/final/
+├── eval.json
+└── images/
+    ├── id001.webp
+    ├── ...
+    └── id200.webp
+
+test_track2/final/
+├── eval.json
+└── images/
+    ├── ball/
+    ├── bird/
+    ├── ...
+    └── woman/</pre>
                             </div>
                         </div>
                     </div>
@@ -221,17 +227,13 @@
                                 <h4>Prepare Results</h4>
                             </div>
                             <div class="step-content">
-                                <p>Generate videos following our structure.</p>
+                                <p>Generate one video for each sample in <code>eval.json</code>, totaling 200 videos per submitted track.</p>
                                 <div class="code-block">
                                     <pre>submission/
-├── id001/
-│   ├── prompt1.mp4
-│   ├── prompt2.mp4
-│   ├── prompt3.mp4
-│   ├── prompt4.mp4
-│   └── prompt5.mp4
+├── 1.mp4
+├── 2.mp4
 ├── ...
-└── id200/</pre>
+└── 200.mp4</pre>
                                 </div>
                             </div>
                         </div>
